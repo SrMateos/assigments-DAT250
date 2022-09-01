@@ -72,4 +72,28 @@ javier=>
 ```
 
 ### Heroku Instalation
+The instalation of Heroku is very simple as their tutorial is very clear. First of all we install de Heroku client.
+```
+paru -S heroku-cli
+```
+
+After this we just login into the Heroku client, and after this, to test everything we can use the test app from the tutorial. We create it and then we push it to the repository.
+```
+heroku login
+git clone https://github.com/heroku/java-getting-started
+cd java-getting-started
+heroku create
+git push heroku main
+```
+
+After this we are prepared to deploy our app with the command `heroku open`. In my case this command fails opening the browser for some reason that I haven't already discover. The error given is the following:
+```
+ ▸    Error opening web browser.
+ ▸    Error: Exited with code 4
+ ▸    
+ ▸    Manually visit https://warm-beyond-16410.herokuapp.com/ in your browser.
+ ```
+
+I didn't manage to solve this, but it is not important as you can manually open the link given and deploy the app as normal. If something like this appears, it means that the app is working succesfully:
+![](herokuApp.png)
 

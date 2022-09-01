@@ -19,11 +19,7 @@ unzip apache-maven-3.8.6-bin.zip
 cd apache-maven-3.8.6/bin
 export PATH=$PATH:$(pwd)
 ```
-To check if maven is already working, I just did:
-```
-mvn -v
-```
-Something like this should appear:
+To check if maven is already working, by writing this in the terminal `mvn -v` something like this should appear:
 ```
 Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
 Maven home: /opt/maven
@@ -32,15 +28,15 @@ Default locale: es_ES, platform encoding: UTF-8
 OS name: "linux", version: "5.15.60-1-manjaro", arch: "amd64", family: "unix"
 ```
 
-### Heroku instalation
-For the Heroku instalation we need some requirements. As I have already installed Maven and it is easy to create a Heroku account I skip this parts. The next thing is Java 8, that I had already installed but not working, as the output of `java --version` is the following: 
+### Java instalation
+For the Heroku instalation we need some requirements. As I have already installed Maven, and it is easy to create a Heroku account I skip this parts. The next thing to do is to install Java 8, that I had already have installed but, it is not working, as the output of `java --version` is the following: 
 ``` 
 openjdk 18.0.2 2022-07-19
 OpenJDK Runtime Environment (build 18.0.2+9)
 OpenJDK 64-Bit Server VM (build 18.0.2+9, mixed mode)
 ```
 
-As I said if I check the java versions I have installed with `archlinux-java status`, the following appears:
+As I said I already have Java 8 installed. By doing `archlinux-java status`, we can check the Java versions that I have:
 ```
 Available Java environments:
   java-11-openjdk
@@ -48,9 +44,32 @@ Available Java environments:
   java-8-openjdk
 ```
 
-We just have to change the version with `sudo archlinux-java set java-8-openjdk`, and if we do `java -version` we can check that we changed the version.
+We must change the version with `sudo archlinux-java set java-8-openjdk`, and if we do `java -version` we can see that we the version was changed.
 ```
 openjdk version "1.8.0_345"
 OpenJDK Runtime Environment (build 1.8.0_345-b01)
 OpenJDK 64-Bit Server VM (build 25.345-b01, mixed mode)
 ```
+
+### Postgresql Instalation
+The last requirement for installing Heroku, is to install postgresql with `paru -S postgresql`. After this I had some problems. First of all, following the [ArchLinux page about postgresql](https://wiki.archlinux.org/title/PostgreSQL#Installation) we should start the database by doing:
+```
+sudo systemctl start postgresql
+```
+The archlinux wiki also recomends to create a postgresql user with our Linux username, in order to be more confortable and to avoid creating having to log in as another user. To get this we just have to introduce the next following commands by changing javier by the username we want to give a role.
+```
+sudo -iu postgres
+[postgres@javier]$ createuser --interactive
+[postgres@javier]$ su javier
+createdb myDatabase
+```
+After this we can do `psql` with our default username in order to check if everything is working. Something like this should appear:
+```
+psql (14.3)
+Digite «help» para obtener ayuda.
+
+javier=>
+```
+
+### Heroku Instalation
+

@@ -94,6 +94,6 @@ After this we are prepared to deploy our app with the command `heroku open`. In 
  ▸    Manually visit https://warm-beyond-16410.herokuapp.com/ in your browser.
  ```
 
-I didn't manage to solve this, but it is not important as you can manually open the link given and deploy the app as normal. If something like this appears, it means that the app is working succesfully:
+I didn't manage to solve this, but it is not important as you can manually open the link given and deploy the app as normal. If something like the picture appears, it means that the app is working succesfully.
 ![](herokuApp.png)
 

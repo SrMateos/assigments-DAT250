@@ -69,7 +69,7 @@ sudo -iu postgres
 createdb myDatabase
 ```
 
-After this we can do `psql` with our default username in order to check if everything is working. If we don't do this last step, an error will appear. If everything have been done well, something like this should appear:
+After this we can do `psql` with our default username in order to check if everything is working. If we don't do this last step, an error will appear. If everything has been done well, something like this should appear:
 ```
 psql (14.3)
 Digite «help» para obtener ayuda.
@@ -83,7 +83,7 @@ The installation of Heroku is very simple as their tutorial is very clear. First
 paru -S heroku-cli
 ```
 
-After this we just login into the Heroku client, and after this, to test everything we can use the test app from the tutorial. We create it and then we push it to the repository.
+Next we just login into the Heroku client, and after this, in order to test everything, we can use the test app from the tutorial. We create it and then we push it to the repository.
 ```
 heroku login
 git clone https://github.com/heroku/java-getting-started

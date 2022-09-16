@@ -22,4 +22,18 @@ To avoid problems with JPA and JUnit, I had to change every Collection Type Attr
 When reading the Collection from the database, a list was returned, so the tests compared a List with Set, throwing an error. After changing every Collection to Sets, everything was working fine.
 
 ### Database inspection
-In order to inspect the database in Intellij I followed the steps of the given tutorial. First 
+In order to inspect the database in Intellij I followed the steps of the given tutorial. First just open de database view by clicking on the database button on the right.
+
+![databaseView](imgs/databaseView.png)
+
+Next we click on  `+ > Data Source > Apache Derby`.
+
+![derbyDataSource](imgs/derbyDataSource.png)
+
+We give a name, the path of the database, which is found in the `persistence.xml` file, and we also enter the user and password that are in the same place.
+
+![dataSourceInput](imgs/dataSourceInput.png)
+
+After this we just right click on the experiment2 dropdown generated in the database view, and click on `Diagrams > Show visualization`. With that we can see the scheme generated.
+
+![databaseScheme](imgs/databaseScheme.png)

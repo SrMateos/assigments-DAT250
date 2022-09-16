@@ -101,5 +101,5 @@ Now we are prepared to deploy our app with the command `heroku open`. In my case
  ```
 
 I didn't manage to solve this, but it is not important as you can manually open the link given and deploy the app as usual. If something like the picture appears, it means that the app is working succesfully.
-![](herokuApp.png)
+![](imgs/herokuApp.png)
 

@@ -3,11 +3,11 @@
 The objetive of this assignment is to understand how to use mongodb to perform basic CRUD operations as well as aggregation.
 
 ## Validation of the installation package
-I am using ArchLinux, so there is no official support for mongodb, but [AUR](https://aur.archlinux.org/) repository provides de package from Ubuntu. At the moment of installing it, the repository installer of ArchLinux checks by default the sha256 hashes, so if mongodb was installed correctly, it means that the hashes should be fine. To check it, by following the [verification tutorial](https://www.mongodb.com/docs/manual/tutorial/verify-mongodb-packages/) we get to see that everything should work.
+I am using ArchLinux, so there is no official support for mongodb, but [AUR](https://aur.archlinux.org/) repository provides de package from Ubuntu. At the moment of installing it, the repository installer of ArchLinux checks by default the sha256 hashes, so if mongodb was installed correctly, it means that the hashes should be fine. To check it, by following the [verification tutorial](https://www.mongodb.com/docs/manual/tutorial/verify-mongodb-packages/), we get to see that everything is working.
 ![](imgs/verificationWithWarning.png)
 ![](imgs/verifyChecksum.png)
 
-Note: in the first picture we can see a warning but the sign is correct. As it is not a big problem and it is probably caused by the problems with the non-official repositories, we can just suppose that everything is fine (or that is what I was told to do by the lab assistant).
+Note: In the first picture we can see a warning but the sign is correct. As it is not a big problem and it is probably caused by the non-official repositories, we can just suppose that everything is fine (or that is what I was told to do by the lab assistant).
 
 ## Experiment 1
 ### Create operation
@@ -33,14 +33,14 @@ In adition to the crud operation we can even combine the CRUD operations into on
 
 ## Experiment 2
 ### Example 1
-The results are the same as the ones of the tutorial.
+The results are the same as the ones from the tutorial.
 ![](imgs/experiment2_1Succesful.png)
 
 ### Example 2
-The results are the same as the ones of the tutorial.
+The results are the same as the ones from the tutorial.
 ![](imgs/experiment2Succesful.png)
 
 ### Additional MapReduce 
-My map reduce consist on retrieving the total money which is won per day. This might be helpful to see a daily record of a store, or maybe you could also filter by price and then do a study to see which days people buy more things, so you could maybe place discounts strategically.
+My map reduce consist on retrieving the total money which is won per day. This might be helpful to see a daily record of a store, or maybe you could also filter by price and then do a study to see which days people buy more things, so you could place discounts strategically.
 The MapReduce starts by calling mapFunction1, which emits a key value formed by the ord_date and the price. After this, the mapFunction2 is called and this just returns an array with the sum of prices. With this we have a collection which stores the day and the sum of everything that has been bought that day. This collection name will be "map_reduce_price_per_day", which we will show with a find, so we can check that the values are correct, and they actually are.
 ![](imgs/totalMoneyPerDay.png)

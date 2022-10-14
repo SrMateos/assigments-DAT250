@@ -7,5 +7,7 @@ The only problem I encountered was about CORS errors. It could be fixed by follo
 
 ## Link to the code
 [Experiment 1](https://github.com/SrMateos/experiment1_assignment6)
+
 [Experiment 2](https://github.com/SrMateos/angularAssignment6)
+
 [Spark project](https://github.com/SrMateos/dat250-sparkjava-counter)
